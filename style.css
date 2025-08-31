@@ -1,0 +1,156 @@
+:root {
+  --primary: #204a7c;
+  --accent: #2461a7;
+  --light: #fff;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  background: none;
+  overflow-x: hidden;
+}
+
+/* Background image with 40% opacity */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('background_p4juks.jpg') center/cover no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.logo-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 38px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  box-shadow: 0 1px 8px rgba(32,74,124,0.14);
+  background: var(--light);
+}
+
+.main-title {
+  color: var(--primary);
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin: 18px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+.container {
+  background: var(--light);
+  box-shadow: 0 2px 32px rgba(50, 90, 140, 0.11);
+  border-radius: 22px;
+  width: 93vw;
+  max-width: 670px;
+  margin-top: 28px;
+  padding: 36px 38px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  color: #222222; /* Darker, near black */
+  font-size: 17px;
+  margin: 20px 0 26px 0;
+  font-weight: 500;
+}
+
+.link-btn {
+  display: block;
+  background: #e1eeff;
+  color: var(--accent);
+  padding: 15px 12px;
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 5px rgba(36, 97, 167, 0.10);
+  margin-top: 7px;
+  width: 100%;
+  max-width: 420px;
+}
+.link-btn:hover,
+.link-btn:focus {
+  background: var(--accent);
+  color: var(--light);
+}
+
+/* Social media section */
+.social-media {
+  margin: 40px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+  transform: scale(1.15);
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 22px 4vw;
+    max-width: 98vw;
+  }
+  .main-title {
+    font-size: 21px;
+  }
+  .subtitle {
+    font-size: 13.8px;
+    margin: 13px 0 19px 0;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  .link-btn {
+    font-size: 13.8px;
+    padding: 10px 2px;
+    border-radius: 11px;
+    max-width: 90vw;
+  }
+  .social-link {
+    width: 32px;
+    height: 32px;
+    gap: 20px;
+  }
+}
